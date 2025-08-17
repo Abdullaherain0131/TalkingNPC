@@ -1,0 +1,27 @@
+# Plugin Information
+name: TalkingNPC
+version: '1.0.0'
+main: com.seninpluginin.TalkingNPC
+api-version: '1.21'
+author: SeninPlugin
+description: 'Hayali karakterleri konuşturan Minecraft plugini'
+website: 'https://github.com/seninpluginin/TalkingNPC'
+
+# Commands
+commands:
+  konuştur:
+    description: 'Bir hayali karakteri konuşturur'
+    usage: '/konuştur <isim> <mesaj>'
+    permission: talkingnpc.konustur
+    permission-message: '§c[TalkingNPC] Bu komutu kullanmak için yetkiniz yok!'
+
+# Permissions
+permissions:
+  talkingnpc.konustur:
+    description: 'TalkingNPC konuşturma komutunu kullanma yetkisi'
+    default: op
+  talkingnpc.*:
+    description: 'TalkingNPC tüm yetkiler'
+    default: op
+    children:
+      talkingnpc.konustur: true
